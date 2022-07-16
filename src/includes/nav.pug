@@ -1,0 +1,27 @@
+nav.flex.flex-center
+    div.flex.flex-center.flex-space-b
+        div.flex.flex-center
+            img#logo(src="./assets/logoWalo.svg" alt="logo walo ware")
+            h3
+                a.walo-text(href="/") Walo Ware Academy
+                
+        button.flex.flex-center.flex-column.burger(type="button")
+            div#up-burger
+            div#middle-burger
+            div#down-burger
+
+            
+    ul#links.hidden
+        li
+            a(href="#") Inicio
+        li
+            a(href="#cursos") Cursos
+        li
+            ul.flex.flex-center
+                li.alt-button.default-button
+                    a Log in
+                li.themed-button.default-button
+                    a Sing up
+        li.flex.flex-center
+            button#change-theme.default-button.flex.flex-center(type="button")
+                img(id="moon" src="./assets/moon.svg" alt="moon")

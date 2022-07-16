@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+
+    include ../includes/boilerplate.pug
+
+    body
+        div#wrapper.dark-mode
+
+            include ../includes/nav.pug
+
+            header.flex.flex-center
+                div.flex.flex-center.left.flex-column.wow.slideInLeft(data-wow-duration='2s' data-wow-delay='0.2s')
+                    h1 Bienvenidos a Walo Ware Academy
+                    p Estamos comprometidos con la creaci&oacute;n de contenido pedag&oacute;gico en programaci&oacute;n e inform&aacute;tica
+                div#header-right.flex.right
+                    pre.pre-preserve.flex.flex-center
+                        code#hello-world.language-javascript
+
+            main
+                section#cursos.flex.flex-center.cards
+                    each val in self.courses
+                            div.card.wow.bounceInUp(data-wow-duration="1s" data-wow-delay="0.2s")
+                                img(src=val.imgSrc alt=val.alt)
+                                div.container
+                                    h4= val.titleCourse
+                                    p= val.content
+
+            include ../includes/footer.pug
+
+            script(src="./js/wow.min.js")
+            script new WOW().init();
